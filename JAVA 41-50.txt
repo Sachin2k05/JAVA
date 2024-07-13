@@ -1,0 +1,71 @@
+41.square and cube the given decimal number
+
+import java.io.*;
+import java .util.*;
+class squarecube
+{
+    public static void main(String[] args)
+    {
+        Scanner obj=new Scanner(System.in);
+        float n=obj.nextFloat();
+        double square,cube;
+        square=n*n;
+        cube=n*n*n;
+        System.out.println("Square "+square);
+        System.out.print("cube "+cube);
+    }
+}
+
+42.nth odd number 
+
+import java.io.*;
+import java .util.*;
+class oddnumber
+{
+    public static void main(String[] args)
+    {
+        Scanner obj=new Scanner(System.in);
+        int n=obj.nextInt();
+        for(int i=1;i<n;i++)
+        {
+            if(i%2!=0)
+            {
+                System.out.print(i+" ");
+            }
+        }
+    }
+}
+
+43. AMSTRONG NUMBER
+
+import java.util.Scanner;
+
+class ArmstrongNumber {
+    public static void main(String[] args) {
+        Scanner obj = new Scanner(System.in);
+        
+        System.out.print("Enter a number: ");
+        int n = obj.nextInt();
+        String c = Integer.toString(n);
+        int s = c.length();  // Number of digits
+        
+        System.out.println("Number of digits: " + s);
+        
+        int t = n;
+        double sum = 0;
+
+        while (n > 0) {
+            int rem = n % 10;
+            sum += Math.pow(rem, s);
+            n = n / 10;
+        }
+
+        if (t == (int) sum) {
+            System.out.print("It is an Armstrong number.");
+        } else {
+            System.out.print("It is not an Armstrong number.");
+        }
+        
+        obj.close(); // Close the scanner
+    }
+}
